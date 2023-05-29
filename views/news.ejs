@@ -1,0 +1,40 @@
+<%-include("partials/header") %> 
+
+<div class="container-fluid">
+
+<div class="news-section">
+    
+        <% for(var i=posts.length-1,j=1;i>=0;i--,j++){ %>
+            <div class="news-item">
+                <div class="news-number">  
+                    <h3><%=j%>.</h3>
+                </div>  
+                <div class="news-heading">
+                    <h3> <%=posts[i].title%></h3>  
+                
+                    <div class="news-box-lower-details">
+                        <span>BY: <%=posts[i].author%> </span> <span style="margin-left:20px">PUBLISHED: <%=posts[i].date %> <br> </span>
+                    </div>
+                </div>
+            </div>
+        <% } %> 
+
+        <% for(var i=articles.length-1;i>=0;i--,j++){ %>
+            <div class="news-item">
+                <div class="news-number">  
+                    <h3><%=j%>.</h3>
+                </div>  
+                <div class="news-heading">
+                    <h3> <%=articles[i].title%></h3>  
+                
+                    <div class="news-box-lower-details">
+                        <span>BY: <%=articles[i].author%> </span> <span style="margin-left:20px">PUBLISHED: <%=posts[i].date %> <br> </span>
+                    </div>
+                </div>
+            </div>
+        <% } %> 
+    
+</div>
+</div>
+
+<%-include("partials/footer") %> 

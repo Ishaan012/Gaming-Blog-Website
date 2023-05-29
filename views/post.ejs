@@ -1,0 +1,31 @@
+<%-include("partials/header") %>
+
+<div class="container-fluid">
+    <div class="post-section">  
+        <div class="post-title">
+            <p class="post-heading"> <%=postTitle %> </p>
+            <span>BY: <%=author%> </span> <span style="margin-left:20px">PUBLISHED: <%=date %> </span>
+        </div>
+    
+            <div class="post-body">
+            <img src="<%=img1%>" alt="" class="post-img-top">
+            
+            <p class="para-1"><%=postBody1%></p>
+            <p class="para-2"><%=postBody2%></p>
+            <p class="para-3"><%=postBody3%></p>
+
+
+            <div class="post-img-middle-section">
+                <img src="<%=img2%>" alt="" class="post-img-middle">
+                <img src="<%=img3%>" alt="" class="post-img-middle">
+            </div>
+
+            <p class="para-4"><%=postBody4%></p>
+            <p class="para-5"><%=postBody5%></p>
+
+        </div>
+    </div>
+</div>
+
+<%-include("partials/footer") %> 
+

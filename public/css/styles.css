@@ -1,0 +1,497 @@
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-color: black;
+}
+
+.container-fluid {
+  padding: 0.5% 10%;
+}
+
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 15px;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.bg-dark {
+  --bs-bg-opacity: 0;
+}
+
+.nav-link {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.nav-item {
+  margin-left: 40px;
+}
+.navbar-nav li a:hover {
+  color: #3cffd0 !important;
+}
+
+.footer-padding {
+  height: 100%;
+  margin-top: 50px;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  background-color: #3cffd0;
+  padding: 0% 10%;
+}
+
+.footer p {
+  margin-top: 25px;
+  font-size: 12px;
+  color: black;
+}
+
+/* HOME PAGE */
+
+/* LATEST NEWS SECTION */
+
+.latest-news-section {
+  margin: auto;
+  padding: 3% 2%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.latest-news {
+  font-family: "Khand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  flex-wrap: wrap;
+  padding-bottom: 1%;
+  border-left: 1px solid #3cffd0;
+  border: 200px;
+  padding-right: 4.5%;
+}
+
+.latest-news h4 {
+  color: #3cffd0;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.ln-img {
+  width: 100px;
+  height: 70px;
+}
+
+.latest-news-highlight {
+  width: 70%;
+  padding: 2% 7%;
+}
+
+.highlight-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.news-title {
+  color: white;
+  text-decoration: none;
+}
+.news-title:hover {
+  color: #3cffd0;
+}
+
+.highlight-img {
+  margin-top: 20px;
+  width: 100%;
+  height: 450px;
+}
+
+.latest-news-heading {
+  margin-top: 50px;
+}
+.latest-news-section-outer {
+  height: 100%;
+}
+
+.latest-news-box {
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+}
+
+.latest-news-title-box {
+  margin-left: 20px;
+  border-bottom: 1px solid #3cffd0;
+}
+
+/* CAROUSEL SECTION */
+
+.top-carousel {
+  position: absolute;
+  height: 500px;
+}
+
+.carousel-item {
+  height: 500px;
+}
+.top-carousel-section {
+  height: 500px;
+}
+
+.carousel-body {
+  padding: 3% 10%;
+  position: absolute;
+  width: 100%;
+}
+
+.carousel-body-heading {
+  font-weight: 700;
+}
+.carousel-body-content p {
+  font-size: 18px;
+}
+
+.top-carousel-img {
+  width: 100%;
+  height: 850px;
+}
+
+/* GOD OF WAR */
+
+@font-face {
+  font-family: "Berserker-regular";
+  src: url(Berserker-Regular.woff);
+}
+
+.gow {
+  font-family: "Berserker-Regular";
+  font-weight: 700;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  text-align: center;
+  line-height: 60px;
+}
+
+.gow-content {
+  margin-top: 60px;
+}
+
+/* THE LAST OF US */
+
+.tlou,
+.cod {
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  word-spacing: 8px;
+  line-height: 50px;
+}
+
+.tlou-content {
+  margin-top: 80px;
+}
+.lou {
+  height: 160%;
+}
+
+/* MODERN WARFARE 2 */
+
+.cod-content {
+  margin-top: 80px;
+}
+
+/* LOWER NEWS SECTION */
+
+.news-lower {
+  color: white;
+  padding: 0.5% 8%;
+  width: 100%;
+  height: 100%;
+}
+
+.news-box-lower {
+  margin-top: 20px;
+  height: 100%;
+  font-family: "Khand", sans-serif;
+  color: white;
+  font-weight: 700;
+}
+
+.news-box-lower-heading-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-box-lower-heading {
+  font-size: 45px;
+  line-height: 20px;
+  border-bottom: 2px solid #3cffd0;
+  border-radius: 10px;
+}
+
+.news-box-lower-details {
+  margin-top: 10px;
+  line-height: 30px;
+  border-bottom: 2px solid #3cffd0;
+  border-radius: 10px;
+}
+
+.news-lower-img {
+  margin-top: 30px;
+  width: 80%;
+  height: 550px;
+  margin-bottom: 50px;
+}
+
+.news-lower-body {
+  font-family: "ARS Maquette Web One";
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.lower-news-upper-section {
+  padding: 0.5% 8%;
+}
+.read-more-section {
+  text-align: center;
+}
+#more,
+#more1,
+#more2,
+#more3,
+#more4 {
+  display: none;
+}
+
+.read-more-btn {
+  background-color: #3cffd0;
+  border-radius: 20%;
+  margin-left: 450px;
+  width: 330px;
+  height: 40px;
+  margin-bottom: 100px;
+  font-weight: 700;
+}
+
+/* Contact us section */
+
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  color: #e2e5de;
+}
+
+.social-media-contact-section {
+  padding: 1% 6%;
+  width: 30%;
+  height: 635px;
+}
+
+.details-section {
+  width: 70%;
+  color: #3cffd0;
+  height: 630px;
+}
+
+.contact-heading {
+  margin-top: 40px;
+}
+.contact-icons {
+  margin-top: 70px;
+}
+.icon-elements {
+  margin-top: 30px;
+}
+
+.details-img {
+  position: absolute;
+  width: 70%;
+  z-index: -1;
+  filter: blur(8px);
+  -webkit-filter: blur(20px);
+}
+
+.form-group-details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5% 15%;
+}
+
+.form-item {
+  margin-right: 20px;
+}
+
+.title {
+  width: 300px;
+  height: 30px;
+}
+
+.submit-button {
+  padding: 0 15%;
+}
+
+.btn {
+  color: #3cffd0;
+  border-color: #3cffd0;
+}
+
+/* ABOUT PAGE */
+
+.about-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+}
+
+.about-section-inner {
+  width: 70%;
+  padding: 0.5% 10%;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.about-section-img {
+  width: 100%;
+  position: absolute;
+  height: 600px;
+  filter: blur(8px);
+}
+
+.about-founder {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 30px;
+}
+
+.avatar-img {
+  width: 120px;
+  height: 120px;
+}
+
+.founder-details {
+  margin-left: 20px;
+}
+
+.about-founder-content {
+  position: relative;
+  width: 70%;
+  padding: 0.5% 10%;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+/* NEWS PAGE */
+
+.news-item {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.news-number,
+.news-heading {
+  margin: 10px;
+}
+
+/* POST PAGE SECTION */
+
+.post-title,
+.highlight-heading {
+  font-family: "Khand", sans-serif;
+}
+
+.post-heading {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.post-img-top {
+  width: 85%;
+  height: 500px;
+}
+
+.post-body {
+  margin-top: 30px;
+  font-family: "ARS Maquette Web One";
+}
+
+.post-img-middle-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.post-img-middle {
+  width: 50%;
+}
+
+.para-1,
+.para-2,
+.para-3,
+.para-4,
+.para-5 {
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+/* HIGHLIGHT PAGE SECTION */
+
+.highlight-img-top {
+  width: 90%;
+}
+
+.highlight-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.upper-highlight {
+  width: 70%;
+}
+.lower-highlight {
+  width: 30%;
+}
+
+/* ARS Maquette font */
+
+@import url(//db.onlinewebfonts.com/c/466deba3855c345af3e1371e28d783ae?family=ARS+Maquette+Web+One);
+@font-face {
+  font-family: "ARS Maquette Web One";
+  src: url("//db.onlinewebfonts.com/t/466deba3855c345af3e1371e28d783ae.eot");
+  src: url("//db.onlinewebfonts.com/t/466deba3855c345af3e1371e28d783ae.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/466deba3855c345af3e1371e28d783ae.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/466deba3855c345af3e1371e28d783ae.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/466deba3855c345af3e1371e28d783ae.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/466deba3855c345af3e1371e28d783ae.svg#ARS Maquette Web One")
+      format("svg");
+}
+
+.highlight-heading-section {
+  font-family: "Khand", sans-serif;
+  margin-top: 30px;
+}
+
+.highlight-body {
+  font-family: "ARS Maquette Web One";
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+.highlight-img-middle {
+  width: 80%;
+  height: 500px;
+}

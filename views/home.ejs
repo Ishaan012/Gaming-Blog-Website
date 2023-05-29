@@ -1,0 +1,314 @@
+<%-include("partials/header") %> 
+
+<div id="home-page">
+  
+  <!-- CAROUSEL SECTION -->
+  
+   <div class="top-carousel-section">
+    <div id="top-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          
+          <div class="carousel-item active">
+            <div class="carousel-body">
+              <div class="carousel-body-heading">
+                <p class="tlou">ENDURE AND SURVIVE <br> RELIVE THE BELOVED GAME THAT STARTED IT ALL REBUILT FOR THE PLAYSTATION®5 CONSOLE AND PC</p>
+              </div>
+              <div class="carousel-body-content">
+                <p class="tlou-content">Experience the emotional storytelling and unforgettable characters in The Last of Us, winner of over 200 Game of the Year awards.</p> 
+                <p> In a ravaged civilisation, where infected and hardened survivors run rampant, Joel, a weary protagonist, is hired to smuggle 14-year-old Ellie out of a military quarantine zone. However, what starts as a small job soon transforms into a brutal cross-country journey.</p>
+              </div>
+            </div>
+            <img src="/images/LOU.jpg" class="d-block w-100 top-carousel-img lou" alt="..."> 
+          </div>
+
+          <div class="carousel-item ">
+            <div class="carousel-body">
+              <div class="carousel-body-heading">
+                <h3 class="gow">EMBARK ON AN EPIC AND HEARTFELT JOURNEY AS KRATOS AND ATREUS STRUGGLE WITH HOLDING ON AND LETTING GO</h3>
+              </div>
+              <div class="carousel-body-content">
+                <p class="gow-content">From Santa Monica Studio comes the sequel to the critically acclaimed God of War (2018). Fimbulwinter is well underway. Kratos and Atreus must journey to each of the Nine Realms in search of answers as Asgardian forces prepare for a prophesied battle that will end the world. <br><br> Along the way they will explore stunning, mythical landscapes, and face fearsome enemies in the form of Norse gods and monsters. The threat of Ragnarök grows ever closer. Kratos and Atreus must choose between their own safety and the safety of the realms.</p>
+              </div>
+            </div>
+            <img src="/images/GOWR.jpg" class="d-block w-100 top-carousel-img" alt="...">
+          </div>
+
+          <div class="carousel-item">
+            <div class="carousel-body">
+              <div class="carousel-body-heading">
+                <h3 class="cod">WELCOME TO THE TASK FORCE 141</h3>
+              </div>
+              <div class="carousel-body-content">
+                <p class="cod-content">NEW GAMEPLAY INNOVATIONS. ALL-NEW GUN HANDLING. ADVANCED AI. MODERN WARFARE® II BRINGS YOU A GLOBAL CAMPAIGN, IMMERSIVE MULTIPLAYER COMBAT AND NARRATIVE-DRIVEN SPECIAL OPS.</p><br><br>
+                <p> MODERN WARFARE II CONNECTS WITH THE NEW CALL OF DUTY®: WARZONETM 2.0 EXPERIENCE, AND WITH IT, THE EVOLUTION IN BATTLE ROYALE WITH A BRAND-NEW PLAY SPACE AND SANDBOX MODE. EXPECT A MASSIVE CALENDAR OF FREE CONTENT POST-LAUNCH FEATURING EVOLVING GAMEPLAY WITH NEW MAPS, MODES, SEASONAL EVENTS, COMMUNITY CELEBRATIONS AND MORE.</p>
+              </div>
+            </div>
+            <img src="/images/COD.jpg" class="d-block w-100 top-carousel-img " alt="..."> 
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#top-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#top-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>    
+   </div>    
+
+   <!-- LATEST NEWS SECTION -->
+
+    <div class="latest-news-section-outer">
+        <div class="latest-news-section">
+
+          <div class="latest-news-highlight">
+            <div class="highlight-heading">
+             <a href="/latest-news-highlight" class="news-title"> Best of Games 2022 from IGN India: God of War: Ragnarok, Elden Ring and Call of Duty: MW2 were the Highlights of the year</a>
+              <div><img src="/images/highlight.jpg" alt="" class="highlight-img">
+              </div>
+            </div>
+          </div>
+
+          <div class="latest-news">
+            <h4>LATEST NEWS</h4>
+          <% for(var i=0;i<articles.length;i++){%>
+            <div class="latest-news-box">
+                <div class="latest-news-img">
+                <img src="/images/ln-<%=i+1%>.jpg" alt="" class="ln-img">
+                </div>
+                <div class="latest-news-title-box">
+                    <h6><a href="/<%=articles[i].title%>" class="news-title"><%=articles[i].title%></a></h6>
+                </div>
+            </div>
+          <%} %>
+          </div>
+
+        </div>
+    </div>
+
+    <!-- NEWS-1 -->
+
+    <div class="lower-news-upper-section">
+      <div class="news-box-lower">
+        <div class="news-box-lower-heading-section">
+          <div class="news-box-lower-heading">
+            <p><%=posts[0].title%></p>
+          </div>
+          <div class="news-box-lower-details">
+            <span>BY: <%=posts[0].author%> </span> <span style="margin-left:20px">PUBLISHED: <%=posts[0].date %> <br> </span>
+          </div>
+            <img src="<%=posts[0].img %> " alt="" class="news-lower-img">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="news-lower">
+      <div class="news-box-lower-body">
+      <p class="news-lower-body"><%=posts[0].para1%></p>
+      <p class="news-lower-body"><%=posts[0].para2%></p> </span>
+ 
+      <span id="dots"></span><span id="more"> <p class="news-lower-body"><%=posts[0].para3%></p>
+        <p class="news-lower-body"><%=posts[0].para4%></p> </span>
+        <button onclick="myFunction()" id="myBtn" class="read-more-btn">READ MORE</button>
+         <script>
+          function myFunction() {
+          var dots = document.getElementById("dots");
+          var moreText = document.getElementById("more");
+          var btnText = document.getElementById("myBtn");
+  
+          if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "READ MORE"; 
+          moreText.style.display = "none";
+          } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "READ LESS"; 
+        moreText.style.display = "inline";
+        }
+        }
+       </script>
+      </div>
+  </div> 
+
+
+  <!-- NEWS-2 -->
+  <div class="lower-news-upper-section">
+    <div class="news-box-lower">
+      <div class="news-box-lower-heading-section">
+        <div class="news-box-lower-heading">
+          <p><%=posts[1].title%></p>
+        </div>
+        <div class="news-box-lower-details">
+          <span>BY: <%=posts[1].author%> </span> <span style="margin-left:20px">PUBLISHED: <%=posts[1].date %> <br> </span>
+        </div>
+          <img src="<%=posts[1].img %> " alt="" class="news-lower-img">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="news-lower">
+    <div class="news-box-lower-body">
+    <p class="news-lower-body"><%=posts[1].para1%></p>
+    <p class="news-lower-body"><%=posts[1].para2%></p> </span>
+
+    <span id="dots1"></span><span id="more1"> <p class="news-lower-body"><%=posts[1].para3%></p>
+      <p class="news-lower-body"><%=posts[1].para4%></p> </span>
+      <button onclick="myFunction1()" id="myBtn1" class="read-more-btn">READ MORE</button>
+       <script>
+        function myFunction1() {
+        var dots1 = document.getElementById("dots1");
+        var moreText1 = document.getElementById("more1");
+        var btnText1 = document.getElementById("myBtn1");
+
+        if (dots1.style.display === "none") {
+        dots1.style.display = "inline";
+        btnText1.innerHTML = "READ MORE"; 
+        moreText1.style.display = "none";
+        } else {
+        dots1.style.display = "none";
+        btnText1.innerHTML = "READ LESS"; 
+        moreText1.style.display = "inline";
+      }
+      }
+     </script>
+   </div>
+  </div> 
+
+<!-- NEWS 3 -->
+
+ <div class="lower-news-upper-section">
+  <div class="news-box-lower">
+    <div class="news-box-lower-heading-section">
+      <div class="news-box-lower-heading">
+        <p><%=posts[2].title%></p>
+      </div>
+      <div class="news-box-lower-details">
+        <span>BY: <%=posts[2].author%> </span> <span style="margin-left:20px">PUBLISHED: <%=posts[2].date %> <br> </span>
+      </div>
+        <img src="<%=posts[2].img %> " alt="" class="news-lower-img">
+    </div>
+  </div>
+ </div>
+
+ <div class="news-lower">
+  <div class="news-box-lower-body">
+  <p class="news-lower-body"><%=posts[2].para1%></p>
+  <p class="news-lower-body"><%=posts[2].para2%></p> </span>
+
+  <span id="dots2"></span><span id="more2"> <p class="news-lower-body"><%=posts[2].para3%></p>
+    <p class="news-lower-body"><%=posts[2].para4%></p> </span>
+    <button onclick="myFunction2()" id="myBtn2" class="read-more-btn">READ MORE</button>
+     <script>
+      function myFunction2() {
+      var dots2 = document.getElementById("dots2");
+      var moreText2 = document.getElementById("more2");
+      var btnText2 = document.getElementById("myBtn2");
+
+      if (dots2.style.display === "none") {
+      dots2.style.display = "inline";
+      btnText2.innerHTML = "READ MORE"; 
+      moreText2.style.display = "none";
+      } else {
+      dots2.style.display = "none";
+      btnText2.innerHTML = "READ LESS"; 
+    moreText2.style.display = "inline";
+    }
+    }
+   </script>
+ </div>
+ </div>
+
+ <!-- NEWS 4 -->
+
+ <div class="lower-news-upper-section">
+  <div class="news-box-lower">
+    <div class="news-box-lower-heading-section">
+      <div class="news-box-lower-heading">
+        <p><%=posts[3].title%></p>
+      </div>
+      <div class="news-box-lower-details">
+        <span>BY: <%=posts[3].author%> </span> <span style="margin-left:20px">PUBLISHED: <%=posts[3].date %> <br> </span>
+      </div>
+        <img src="<%=posts[3].img %> " alt="" class="news-lower-img">
+    </div>
+  </div>
+ </div>
+
+
+ <div class="news-lower">
+  <div class="news-box-lower-body">
+  <p class="news-lower-body"><%=posts[3].para1%></p>
+  <p class="news-lower-body"><%=posts[3].para2%></p> </span>
+
+  <span id="dots3"></span><span id="more3"> <p class="news-lower-body"><%=posts[3].para3%></p>
+    <p class="news-lower-body"><%=posts[3].para4%></p> </span>
+    <button onclick="myFunction3()" id="myBtn3" class="read-more-btn">READ MORE</button>
+     <script>
+      function myFunction3() {
+      var dots3 = document.getElementById("dots3");
+      var moreText3 = document.getElementById("more3");
+      var btnText3 = document.getElementById("myBtn3");
+
+      if (dots3.style.display === "none") {
+      dots3.style.display = "inline";
+      btnText3.innerHTML = "READ MORE"; 
+      moreText3.style.display = "none";
+      } else {
+      dots3.style.display = "none";
+      btnText3.innerHTML = "READ LESS"; 
+    moreText3.style.display = "inline";
+    }
+    }
+   </script>
+ </div>
+ </div> 
+
+<!-- NEWS-5 -->
+
+ <div class="lower-news-upper-section">
+  <div class="news-box-lower">
+    <div class="news-box-lower-heading-section">
+      <div class="news-box-lower-heading">
+        <p><%=posts[4].title%></p>
+      </div>
+      <div class="news-box-lower-details">
+        <span>BY: <%=posts[4].author%> </span> <span style="margin-left:20px">PUBLISHED: <%=posts[4].date %> <br> </span>
+      </div>
+        <img src="<%=posts[4].img %> " alt="" class="news-lower-img">
+    </div>
+  </div>
+ </div>
+
+ <div class="news-lower">
+  <div class="news-box-lower-body">
+  <p class="news-lower-body"><%=posts[4].para1%></p>
+  <p class="news-lower-body"><%=posts[4].para2%></p> </span>
+
+  <span id="dots4"></span><span id="more4"> <p class="news-lower-body"><%=posts[4].para3%></p>
+    <p class="news-lower-body"><%=posts[4].para4%></p> </span>
+    <button onclick="myFunction4()" id="myBtn4" class="read-more-btn">READ MORE</button>
+     <script>
+      function myFunction4() {
+      var dots4 = document.getElementById("dots4");
+      var moreText4 = document.getElementById("more4");
+      var btnText4 = document.getElementById("myBtn4");
+
+      if (dots4.style.display === "none") {
+      dots4.style.display = "inline";
+      btnText4.innerHTML = "READ MORE"; 
+      moreText4.style.display = "none";
+      } else {
+      dots4.style.display = "none";
+      btnText4.innerHTML = "READ LESS"; 
+      moreText4.style.display = "inline";
+    }
+    }
+   </script>
+  </div>
+ </div> 
+</div>
+
+<%-include("partials/footer") %> 
